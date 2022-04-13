@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.binaracademy.retrofitwithfragment.R
 import com.binaracademy.retrofitwithfragment.adapter.MainAdapter
@@ -40,6 +41,10 @@ class MainFragment : Fragment() {
 //        val layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
 //        binding.rvMain.layoutManager = layoutManager
 //        binding.rvMain.adapter = adapter
+
+        binding.floatingActionButton2.setOnClickListener {
+            findNavController().navigate(MainFragmentDirections.actionMainFragmentToAddPostFragment())
+        }
 
         CarsApi.retrofitService.allCar().enqueue(object : Callback<List<GetAllCarResponseItem>> {
             override fun onResponse(
