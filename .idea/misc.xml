@@ -3,13 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/activity_main.xml" value="0.21818181061547676" />
+        <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/activity_view_model.xml" value="0.2128623188405797" />
         <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/fragment_add_post.xml" value="0.10677083333333333" />
         <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/fragment_detail.xml" value="0.21818181061547676" />
-        <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/fragment_login.xml" value="0.10677083333333333" />
-        <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/fragment_main.xml" value="0.1" />
+        <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/fragment_login.xml" value="0.21818181061547676" />
+        <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/fragment_main.xml" value="0.1483636312185242" />
         <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/fragment_post.xml" value="0.21818181061547676" />
+        <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
         <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/fragment_register.xml" value="0.21818181061547676" />
         <entry key="..\:/Users/albet/Documents/Binar Academy/Chapter5/retrofit fragment recycleview/app/src/main/res/layout/item_recycleview.xml" value="0.19199999334161955" />
       </map>

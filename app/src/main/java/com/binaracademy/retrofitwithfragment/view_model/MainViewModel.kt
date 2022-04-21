@@ -1,5 +1,6 @@
-package com.binaracademy.retrofitwithfragment
+package com.binaracademy.retrofitwithfragment.view_model
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -30,7 +31,7 @@ class MainViewModel : ViewModel() {
             }
 
             override fun onFailure(call: Call<List<GetAllCarResponseItem>>, t: Throwable) {
-                TODO("Not yet implemented")
+               Log.d("Tag",t.message.toString());
             }
 
         })

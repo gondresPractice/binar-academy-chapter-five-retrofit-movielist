@@ -6,5 +6,6 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class DetailModel (
     val nama :String,
-    val price : Int
+    val detail : String,
+
         ): Parcelable

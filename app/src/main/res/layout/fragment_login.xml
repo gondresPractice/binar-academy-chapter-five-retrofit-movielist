@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.MainFragment">
+    tools:context=".fragment.home.MainFragment">
 
 
     <TextView
@@ -46,21 +46,34 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukkan Email"
+        android:hint="Masukkan Password"
+        app:endIconMode="password_toggle"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
+            android:inputType="textPassword"
+
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <Button
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTint="@color/black"
+        android:id="@+id/btnLogin"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="login"/>
 
+    <Button
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:backgroundTint="@color/black"
@@ -68,8 +81,9 @@
         android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="Login"/>
+        android:layout_marginTop="10dp"
+        android:text="Daftar"/>
+
 
 
 

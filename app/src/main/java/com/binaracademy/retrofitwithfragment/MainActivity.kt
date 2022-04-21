@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import com.binaracademy.retrofitwithfragment.databinding.ActivityMainBinding
+import com.binaracademy.retrofitwithfragment.view_model.MainViewModel
 
 class MainActivity : AppCompatActivity() {
 

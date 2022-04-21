@@ -11,11 +11,8 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.binaracademy.retrofitwithfragment.databinding.ItemRecycleviewBinding
-import com.binaracademy.retrofitwithfragment.fragment.MainFragmentDirections
-import com.binaracademy.retrofitwithfragment.model.DetailModel
-import com.binaracademy.retrofitwithfragment.model.GetAllCarResponseItem
-import com.binaracademy.retrofitwithfragment.model.MovieModel
-import com.binaracademy.retrofitwithfragment.model.Result
+import com.binaracademy.retrofitwithfragment.fragment.home.MainFragmentDirections
+import com.binaracademy.retrofitwithfragment.model.*
 import com.bumptech.glide.Glide
 
 class SecondAdapter(
@@ -45,12 +42,17 @@ class SecondAdapter(
 
 
         holder.itemView.setOnClickListener {
-//            var name = item[position].id
-//            var price = item[position].price
-//            var detail = DetailModel(
-//                name,price
-//            )
-//            it.findNavController().navigate(MainFragmentDirections.actionMainFragmentToDetailFragment(name,price))
+           var name = item[position].title.toString()
+            var subtitle = item[position].popularity.toString()
+            var overview = item[position].overview.toString()
+            var date = item[position].releaseDate.toString()
+            var images = item[position].backdropPath.toString()
+            var rating = item[position].voteAverage.toString()
+
+
+          var detail = DetailMovieModel(
+               name, subtitle,overview,date,images,rating)
+           it.findNavController().navigate(MainFragmentDirections.actionMainFragmentToDetailFragment(detail))
         }
     }
 

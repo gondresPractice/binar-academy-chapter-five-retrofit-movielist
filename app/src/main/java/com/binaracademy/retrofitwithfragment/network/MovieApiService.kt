@@ -1,10 +1,8 @@
 package com.binaracademy.retrofitwithfragment.network
 
-import com.binaracademy.retrofitwithfragment.model.GetAllCarResponseItem
-import com.binaracademy.retrofitwithfragment.model.MovieModel
-import com.binaracademy.retrofitwithfragment.model.RegisterRequest
-import com.binaracademy.retrofitwithfragment.model.RegisterResponseItem
-import com.binaracademy.retrofitwithfragment.model.Result
+import androidx.lifecycle.MutableLiveData
+import com.binaracademy.retrofitwithfragment.model.*
+import com.binaracademy.retrofitwithfragment.model.movie_detail.MovieDetail
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
@@ -13,6 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 
 private const val BASE_URL = "https://api.themoviedb.org/"
 private const val API_KEY = "a87419b6cfe5fd1899b306a97cf55f87"
@@ -24,11 +23,11 @@ private val retrofit = Retrofit.Builder()
 
 interface MovieApiService{
 
-    @GET("3/movie/634649/recommendations?api_key=a87419b6cfe5fd1899b306a97cf55f87&language=en-US&page=1")
+    @GET("3/movie/634649/recommendations?api_key=$API_KEY&language=en-US&page=1")
     fun allMovies(): Call<MovieModel>
 
-    @POST("admin/auth/register")
-    fun registerBody(@Body registerRequest: RegisterRequest): Call<RegisterResponseItem>
+    @GET("3/movie/68726?api_key=$API_KEY&append_to_response=videos")
+    fun getDetail(): Call<MovieDetail>
 }
 
 object MovieApi{

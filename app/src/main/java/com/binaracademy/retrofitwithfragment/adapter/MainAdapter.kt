@@ -11,9 +11,9 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.binaracademy.retrofitwithfragment.databinding.ItemRecycleviewBinding
-import com.binaracademy.retrofitwithfragment.fragment.MainFragmentDirections
 import com.binaracademy.retrofitwithfragment.model.DetailModel
 import com.binaracademy.retrofitwithfragment.model.GetAllCarResponseItem
+import com.bumptech.glide.Glide
 
 class MainAdapter(
     private val item: List<GetAllCarResponseItem>
@@ -36,15 +36,18 @@ class MainAdapter(
         holder.binding.tvPrice.text = item[position].price.toString()
 
 
+        Glide.with(holder.itemView.context)
+            .load(item[position].image)
+            .into(holder.binding.ivImage)
 
-        holder.itemView.setOnClickListener {
-            var name = item[position].name
-            var price = item[position].price
-            var detail = DetailModel(
-                name,price
-            )
-            it.findNavController().navigate(MainFragmentDirections.actionMainFragmentToDetailFragment(name,price))
-        }
+//        holder.itemView.setOnClickListener {
+//            var name = item[position].name
+//            var price = item[position].price
+//            var detail = DetailModel(
+//                name,detail
+//            )
+//            it.findNavController().navigate(MainFragmentDirections.actionMainFragmentToDetailFragment(name,price))
+//        }
     }
 
     override fun getItemCount(): Int {

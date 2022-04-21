@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.MainFragment">
+    tools:context=".fragment.home.MainFragment">
 
 
     <TextView
@@ -108,10 +108,10 @@
         android:layout_marginRight="16dp"
         android:backgroundTint="@color/black"
         android:id="@+id/btnRegister"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="50dp"
         android:text="Daftar"/>
 
 
