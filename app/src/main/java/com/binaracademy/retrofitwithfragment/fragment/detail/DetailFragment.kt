@@ -18,18 +18,27 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var movieId = arguments.movieDetail.id
         var title = arguments.movieDetail.title
         var subtitle = arguments.movieDetail.subtitle
         var overview = arguments.movieDetail.overview
         var date = arguments.movieDetail.date
         var image = arguments.movieDetail.image
-        var rating = arguments.movieDetail.rating
+        var rating  = arguments.movieDetail.rating
+        var popularity = arguments.movieDetail.popularity
 
+        var rate = rating.toFloat()
+        "%.0f".format(rate)
+
+        print("ID $movieId")
+
+
+        binding.proggRate.setProgress(rating.toInt() * 10)
         binding.tvTitle.setText(title)
-        binding.tvTagline.setText(subtitle)
         binding.tvOverview.setText(overview)
         binding.tvDate.setText(date)
-        binding.tvRate.setText(rating)
+        binding.tvRate.setText(rate.toString())
+        binding.tvPopularity.setText(popularity)
         Glide.with(requireContext())
             .load("https://image.tmdb.org/t/p/w780/"+image)
             .into(binding.ivPoster)

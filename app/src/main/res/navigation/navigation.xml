@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/coverFragment">
 
     <fragment
         android:id="@+id/mainFragment"
@@ -75,5 +75,16 @@
         <action
             android:id="@+id/action_profileFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coverFragment"
+        android:name="com.binaracademy.retrofitwithfragment.fragment.cover.CoverFragment"
+        android:label="CoverFragment" >
+        <action
+            android:id="@+id/action_coverFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_coverFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

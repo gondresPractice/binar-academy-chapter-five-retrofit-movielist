@@ -32,13 +32,13 @@ class MainAdapter(
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        holder.binding.tvNama.text = item[position].name
-        holder.binding.tvPrice.text = item[position].price.toString()
-
-
-        Glide.with(holder.itemView.context)
-            .load(item[position].image)
-            .into(holder.binding.ivImage)
+//        holder.binding.tvNama.text = item[position].name
+//        holder.binding.tvPrice.text = item[position].price.toString()
+//
+//
+//        Glide.with(holder.itemView.context)
+//            .load(item[position].image)
+//            .into(holder.binding.ivImage)
 
 //        holder.itemView.setOnClickListener {
 //            var name = item[position].name

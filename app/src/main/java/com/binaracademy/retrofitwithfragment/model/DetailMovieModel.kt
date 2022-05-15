@@ -5,10 +5,12 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class DetailMovieModel (
+    val id : Int,
     val title :String,
     val subtitle : String,
     val overview : String,
     val date :String,
     val image:String,
-    val rating : String,
+    val rating : Double,
+    val popularity : String
         ): Parcelable

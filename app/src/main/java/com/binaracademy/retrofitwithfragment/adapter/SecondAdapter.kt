@@ -32,26 +32,29 @@ class SecondAdapter(
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        holder.binding.tvNama.text = item[position].title
-        holder.binding.tvPrice.text = item[position].overview
+        holder.binding.tvTitle.text = item[position].title.toString()
+        holder.binding.tvDate.text = item[position].releaseDate
+        holder.binding.tvRate.text = item[position].voteAverage.toString()
 
 
         Glide.with(holder.itemView.context)
             .load("https://image.tmdb.org/t/p/w780/"+item[position].backdropPath)
-            .into(holder.binding.ivImage);
+            .into(holder.binding.ivPosterImage);
 
 
         holder.itemView.setOnClickListener {
+            var movieId = item[position].id!!.toInt()
            var name = item[position].title.toString()
             var subtitle = item[position].popularity.toString()
             var overview = item[position].overview.toString()
             var date = item[position].releaseDate.toString()
             var images = item[position].backdropPath.toString()
             var rating = item[position].voteAverage.toString()
+            var popularity = item[position].popularity.toString()
 
 
           var detail = DetailMovieModel(
-               name, subtitle,overview,date,images,rating)
+               movieId,name, subtitle,overview,date,images,rating.toDouble(),popularity)
            it.findNavController().navigate(MainFragmentDirections.actionMainFragmentToDetailFragment(detail))
         }
     }

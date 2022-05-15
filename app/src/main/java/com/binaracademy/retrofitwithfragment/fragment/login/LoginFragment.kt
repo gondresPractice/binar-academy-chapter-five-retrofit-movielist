@@ -28,10 +28,7 @@ class LoginFragment : Fragment() {
         val sharedPreferences : SharedPreferences = requireActivity().getSharedPreferences(sharedPref, Context.MODE_PRIVATE)
         val editor : SharedPreferences.Editor = sharedPreferences.edit()
 
-        val toHome = sharedPreferences.getBoolean("loginPref",false)
-        if (toHome == true){
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToMainFragment())
-        }
+
         var username = "";
         var password = "";
 

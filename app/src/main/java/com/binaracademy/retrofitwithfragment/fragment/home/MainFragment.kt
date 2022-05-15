@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.binaracademy.retrofitwithfragment.view_model.MainViewModel
 import com.binaracademy.retrofitwithfragment.view_model.SecondViewModel
@@ -29,6 +30,7 @@ class MainFragment : Fragment() {
     lateinit var binding : FragmentMainBinding
     lateinit var username : String
     private val mId = MutableLiveData<Int>()
+
 
 
     private var user_db : UserDatabase?= null
@@ -85,8 +87,9 @@ class MainFragment : Fragment() {
 
             print("Main activity : datanya -> $it")
             val adapter = MainAdapter(it)
-            val layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
+            val layoutManager = GridLayoutManager(requireContext(),2)
             binding.rvMain.layoutManager = layoutManager
+//            binding.rvMain.layoutManager = layoutManager
             binding.rvMain.adapter = adapter
         }
     }
@@ -102,7 +105,7 @@ class MainFragment : Fragment() {
             }
             Log.d("Tag","Fragment activity : datanya -> $it")
             val adapter = SecondAdapter(it)
-            val layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
+            val layoutManager = GridLayoutManager(requireContext(),2)
             binding.rvMain.layoutManager = layoutManager
             binding.rvMain.adapter = adapter
         }

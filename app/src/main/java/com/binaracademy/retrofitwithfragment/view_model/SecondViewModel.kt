@@ -56,7 +56,7 @@ class SecondViewModel : ViewModel() {
         MovieApi.retrofitService.getDetail().enqueue(object : Callback<MovieDetail> {
             override fun onResponse(call: Call<MovieDetail>, response: Response<MovieDetail>) {
                 detail.value = response.body()
-                print(response.body().toString())
+//                print(response.body().toString())
                 Log.d("Response Detail Success", response.body().toString())
             }
 

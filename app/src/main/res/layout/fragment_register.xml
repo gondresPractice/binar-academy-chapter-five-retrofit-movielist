@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    
+    android:background="@color/primary"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,14 +13,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:layout_marginTop="50dp"
         android:layout_gravity="center"/>
     <!-- TODO: Update blank fragment layout -->
     <com.google.android.material.textfield.TextInputLayout
-
-        android:textColorHint="@color/black"
+        app:helperTextTextColor="@color/white"
+        app:placeholderTextColor="@color/white"
+        app:prefixTextColor="@color/white"
+        app:counterTextColor="@color/white"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="50dp"
@@ -33,14 +38,19 @@
             android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
 
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:textColorHint="@color/black"
+        app:helperTextTextColor="@color/white"
+        app:placeholderTextColor="@color/white"
+        app:prefixTextColor="@color/white"
+        app:counterTextColor="@color/white"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="10dp"
@@ -53,13 +63,18 @@
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:textColorHint="@color/black"
+        app:helperTextTextColor="@color/white"
+        app:placeholderTextColor="@color/white"
+        app:prefixTextColor="@color/white"
+        app:counterTextColor="@color/white"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="10dp"
@@ -67,6 +82,7 @@
         android:layout_height="wrap_content"
         android:hint="Masukkan Password"
         app:endIconMode="password_toggle"
+        app:endIconTint="@color/white"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -76,18 +92,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:textColorHint="@color/black"
+        app:helperTextTextColor="@color/white"
+        app:placeholderTextColor="@color/white"
+        app:prefixTextColor="@color/white"
+        app:counterTextColor="@color/white"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+      app:endIconTint="@color/white"
         android:hint="Masukkan Konfirmasi Password"
         app:endIconMode="password_toggle"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -97,16 +119,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:backgroundTint="@color/black"
+        android:background="@drawable/rounded_et"
         android:id="@+id/btnRegister"
         android:textColor="@color/white"
         android:layout_width="match_parent"

@@ -43,6 +43,8 @@ class RegisterFragment : Fragment() {
 
             if(username.isEmpty() || email.isEmpty() || password.isEmpty() || repassword.isEmpty()){
                 Toast.makeText(requireContext(),"Silahkan isi kolom terlebih dahulu",Toast.LENGTH_LONG).show()
+            }else if(password != repassword){
+                binding.etConfirmPassword.setError("Password is not same!")
             }else{
                 Thread{
                     val result = user_db?.UserDao()?.insertUser(userList)
